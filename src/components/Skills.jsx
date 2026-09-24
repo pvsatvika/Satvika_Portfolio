@@ -1,98 +1,105 @@
 import React from 'react';
 
 export default function Skills() {
-  const coreSkills = [
+  const skillCards = [
     {
-      group: 'Programming & Web Fundamentals',
-      items: ['Python', 'C', 'HTML', 'CSS', 'JavaScript']
+      id: 'ai-ml',
+      tag: '// 01',
+      badge: 'AI & INTELLIGENCE',
+      title: 'Intelligent Systems & AI',
+      items: [
+        'Machine Learning Fundamentals',
+        'Generative AI Workflows',
+        'Google Gemini API',
+        'Prompt Engineering',
+        'Small Language Models'
+      ]
     },
     {
-      group: 'Frameworks & Databases',
-      items: ['Flask', 'MySQL', 'SQLite']
+      id: 'web-app',
+      tag: '// 02',
+      badge: 'APPLICATION STACK',
+      title: 'Web & Application Stack',
+      items: [
+        'Python (Flask)',
+        'Streamlit',
+        'React',
+        'HTML5',
+        'CSS3',
+        'JavaScript'
+      ]
     },
     {
-      group: 'Tools & Development',
-      items: ['Git', 'GitHub', 'VS Code']
+      id: 'prog-lang',
+      tag: '// 03',
+      badge: 'LANGUAGES',
+      title: 'Programming Foundations',
+      items: ['Python', 'C']
     },
     {
-      group: 'Computer Science Core',
-      items: ['Data Structures & Algorithms (DSA)', 'Object-Oriented Programming (OOP)', 'DBMS']
+      id: 'core-cs',
+      tag: '// 04',
+      badge: 'CORE CS',
+      title: 'Core Computer Science',
+      items: [
+        'Data Structures & Algorithms',
+        'Object-Oriented Programming (OOP)',
+        'Database Management Systems (DBMS)',
+        'MySQL',
+        'SQLite'
+      ]
     },
     {
-      group: 'Artificial Intelligence & ML',
-      items: ['AI / Machine Learning', 'Generative AI', 'Prompt Engineering']
+      id: 'tools-dev',
+      tag: '// 05',
+      badge: 'DEVELOPER ENVIRONMENT',
+      title: 'Workflows & Developer Tools',
+      items: ['Git', 'GitHub', 'VS Code', 'AWS Educate']
     }
-  ];
-
-  const appliedTechnologies = [
-    'React',
-    'Vite',
-    'Node.js',
-    'Express',
-    'REST APIs',
-    'FastAPI',
-    'LiveKit',
-    'Murf AI',
-    'Streamlit',
-    'PyPDF',
-    'GIS Data Analysis'
   ];
 
   return (
     <section className="editorial-skills-section" id="skills">
       <div className="editorial-container">
-        <div className="section-title-group">
-          <span className="section-meta-mono">03 // TECHNICAL FOUNDATION & TOOLING</span>
-          <h2 className="section-main-title">Skills & Technologies</h2>
-          <p className="section-editorial-lead">
-            A clear distinction between my core technical foundation and the broader set of tools applied across various project stacks.
+        {/* Section Header */}
+        <div className="skills-editorial-header">
+          <span className="skills-meta-tag">04. TECHNICAL TOOLSET</span>
+          <h2 className="skills-serif-title">Skills & Capabilities</h2>
+          <p className="skills-editorial-lead">
+            Structured technical capabilities grounded in university coursework, full-stack application engineering, and hackathon projects.
           </p>
+          <div className="skills-header-divider"></div>
         </div>
 
-        {/* SUBSECTION A: CORE SKILLS */}
-        <div className="skills-level-block core-skills-block">
-          <div className="level-header">
-            <span className="level-badge">LEVEL A</span>
-            <h3 className="level-title">Core Skills</h3>
-            <p className="level-desc">
-              Technologies, programming languages, and computer science fundamentals that form my primary technical background.
-            </p>
-          </div>
-
-          <div className="core-skills-grid">
-            {coreSkills.map((cat) => (
-              <div key={cat.group} className="core-skill-card">
-                <h4 className="core-group-title">{cat.group}</h4>
-                <ul className="core-item-list">
-                  {cat.items.map((item) => (
-                    <li key={item} className="core-item">
-                      <span className="core-bullet">▪</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+        {/* Grouped 5-Card Grid Layout */}
+        <div className="skills-grouped-grid">
+          {skillCards.map((card) => (
+            <div key={card.id} className="skill-group-editorial-card">
+              <div className="skill-card-top-redesigned">
+                <div className="skill-card-tags">
+                  <span className="skill-card-mono-tag">{card.tag}</span>
+                  <span className="skill-card-pill-badge">{card.badge}</span>
+                </div>
+                <h3 className="skill-card-title-serif">{card.title}</h3>
               </div>
-            ))}
-          </div>
+              <ul className="skill-card-list">
+                {card.items.map((item) => (
+                  <li key={item} className="skill-card-item">
+                    <span className="item-bullet">▪</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        {/* SUBSECTION B: WORKED WITH / APPLIED IN PROJECTS */}
-        <div className="skills-level-block applied-skills-block">
-          <div className="level-header">
-            <span className="level-badge secondary-badge">LEVEL B</span>
-            <h3 className="level-title">Worked With / Applied in Projects</h3>
-            <p className="level-desc">
-              Technologies I’ve worked with while building projects and experimenting with different stacks.
-            </p>
-          </div>
-
-          <div className="applied-tech-chips">
-            {appliedTechnologies.map((tech) => (
-              <span key={tech} className="applied-chip">
-                {tech}
-              </span>
-            ))}
-          </div>
+        {/* Bottom Banner */}
+        <div className="skills-bottom-banner">
+          <span className="banner-icon">//</span>
+          <span className="banner-text">
+            <strong>Practical Application:</strong> Toolset actively applied across production repositories, competitive hackathons, and software projects.
+          </span>
         </div>
       </div>
     </section>

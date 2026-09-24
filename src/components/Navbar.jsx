@@ -13,11 +13,14 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Projects', href: '#projects' },
+    { label: 'Intro', href: '#hero' },
     { label: 'About', href: '#about' },
+    { label: 'Academics', href: '#academics' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Journey', href: '#journey' },
     { label: 'Certifications', href: '#certifications' },
+    { label: 'Interests', href: '#interests' },
     { label: 'Contact', href: '#contact' }
   ];
 

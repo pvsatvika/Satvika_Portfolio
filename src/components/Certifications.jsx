@@ -3,91 +3,98 @@ import React from 'react';
 export default function Certifications() {
   const certificationsList = [
     {
-      provider: 'GOOGLE DEEPMIND',
+      issuer: 'GOOGLE DEEPMIND',
       title: 'Google DeepMind Learning Track',
-      detail: 'Completed multi-stage learning track covering Small Language Models, Neural Networks, Transformers, and Capstone concepts.'
+      detail: 'Small Language Models, Transformers, & Neural Networks curriculum.'
     },
     {
-      provider: 'ANTHROPIC',
-      title: 'AI Fluency: Framework & Foundations',
-      detail: 'Completed Anthropic AI framework and foundational AI literacy coursework.'
+      issuer: 'ANTHROPIC',
+      title: 'Anthropic — AI Fluency: Framework & Foundations',
+      detail: 'Foundational AI framework, prompt architecture, and LLM principles.'
     },
     {
-      provider: 'ANTHROPIC',
-      title: 'Claude 101',
-      detail: 'Completed introductory coursework on Claude AI model capabilities and application patterns.'
+      issuer: 'ANTHROPIC',
+      title: 'Anthropic — Claude 101',
+      detail: 'Introductory track on Claude AI integration patterns and prompt design.'
     },
     {
-      provider: 'AWS EDUCATE',
-      title: 'Machine Learning Foundations',
-      detail: 'AWS Educate learning badge in machine learning fundamentals.'
+      issuer: 'MURF AI',
+      title: 'Murf AI — 10 Days of Voice Agents',
+      detail: 'Hands-on intensive track covering real-time voice synthesis & LiveKit.'
     },
     {
-      provider: 'AWS EDUCATE',
-      title: 'Introduction to Generative AI',
-      detail: 'AWS Educate learning badge in Generative AI concepts and cloud workloads.'
+      issuer: 'AWS EDUCATE',
+      title: 'AWS Educate — Machine Learning Foundations',
+      detail: 'Cloud-based machine learning fundamentals and predictive modeling.'
     },
     {
-      provider: 'MURF AI',
-      title: '10 Days of Voice Agents',
-      detail: 'Completed 10-day hands-on learning track for real-time voice AI agents.'
+      issuer: 'AWS EDUCATE',
+      title: 'AWS Educate — Introduction to Generative AI',
+      detail: 'Generative AI workload patterns and foundation model deployment.'
     },
     {
-      provider: 'UDEMY',
-      title: 'Complete Python Course',
-      detail: 'Completed Python programming language course.'
+      issuer: 'ET AI HACKATHON 2.0',
+      title: 'ET AI Hackathon 2.0 Certificate',
+      detail: 'Official Participation Certificate for ET AI Hackathon 2.0.'
     },
     {
-      provider: 'UDEMY',
-      title: 'Data Structures in C',
-      detail: 'Completed data structures implementation coursework using C.'
+      issuer: 'ADOBE / UNSTOP',
+      title: 'Adobe Hackathon Certificate',
+      detail: 'Official Participation Certificate for Adobe Unstop Hackathon.'
     },
     {
-      provider: 'HACKERRANK',
-      title: 'Problem Solving (Basic)',
-      detail: 'Verified skill badge in foundational problem solving.'
+      issuer: 'WOMEN WHO ASPIRE',
+      title: 'Women Who Aspire Certificate',
+      detail: 'Official Participation Certificate for Women Who Aspire Hackathon.'
     },
     {
-      provider: 'HACKERRANK',
-      title: 'C Language Certification',
+      issuer: 'UDEMY',
+      title: 'Udemy — The Complete Python Bootcamp',
+      detail: 'Comprehensive Python programming language and OOP concepts.'
+    },
+    {
+      issuer: 'UDEMY',
+      title: 'Udemy — Data Structures in C',
+      detail: 'Low-level memory management and data structures implementation in C.'
+    },
+    {
+      issuer: 'HACKERRANK',
+      title: 'HackerRank — Problem Solving (Basic)',
+      detail: 'Verified skill badge in algorithmic problem solving and logic.'
+    },
+    {
+      issuer: 'HACKERRANK',
+      title: 'HackerRank — C Language Certification',
       detail: 'Verified skill badge in C programming language.'
     },
     {
-      provider: 'HACKERRANK',
-      title: 'Python Language Certification',
+      issuer: 'HACKERRANK',
+      title: 'HackerRank — Python Language Certification',
       detail: 'Verified skill badge in Python programming language.'
-    },
-    {
-      provider: 'COMPETITION & LEARNING',
-      title: 'ET AI Hackathon Certificate',
-      detail: 'Received participation certification for ET AI Hackathon 2.0.'
-    },
-    {
-      provider: 'COMPETITION & LEARNING',
-      title: 'Adobe Hackathon Participation Certificate',
-      detail: 'Received participation certification for Adobe Unstop Hackathon.'
     }
   ];
 
   return (
     <section className="editorial-certifications-section" id="certifications">
       <div className="editorial-container">
+        {/* Section Header */}
         <div className="section-title-group">
-          <span className="section-meta-mono">05 // CREDENTIALS & CURRICULUM</span>
+          <span className="section-meta-mono">07 // CREDENTIALS & CERTIFICATIONS</span>
           <h2 className="section-main-title">Certifications & Learning</h2>
           <p className="section-editorial-lead">
-            Completed technical courses, learning tracks, cloud badges, and skill certifications displayed with equal visual hierarchy.
+            Verified skill badges, learning tracks, technical certifications, and hackathon participation credentials.
           </p>
         </div>
 
-        <div className="equal-certifications-grid">
+        {/* Static 3-Column Grid with NO external buttons/links */}
+        <div className="certifications-3col-grid">
           {certificationsList.map((item, index) => (
-            <div key={index} className="equal-cert-card">
-              <div className="cert-card-header">
-                <span className="cert-provider-tag">{item.provider}</span>
+            <div key={index} className="cert-grid-card">
+              <div className="cert-card-top-row">
+                <span className="cert-issuer-badge">{item.issuer}</span>
               </div>
-              <h3 className="cert-item-title">{item.title}</h3>
-              <p className="cert-item-detail">{item.detail}</p>
+              <h3 className="cert-grid-title">{item.title}</h3>
+              <p className="cert-grid-detail">{item.detail}</p>
             </div>
           ))}
         </div>

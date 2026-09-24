@@ -6,10 +6,10 @@ export default function Contact() {
       <div className="editorial-container">
         <div className="contact-editorial-box">
           <div className="contact-header-block">
-            <span className="section-meta-mono text-warm">07 // INQUIRIES & CONNECT</span>
-            <h2 className="contact-main-title">Let’s Build Together</h2>
+            <span className="section-meta-mono text-warm">09 // GET IN TOUCH</span>
+            <h2 className="contact-callout-heading">Let's Connect</h2>
             <p className="contact-lead-text">
-              Open to technical collaborations, software engineering opportunities, and research inquiries. Reach out via email or connect across developer platforms.
+              Open for technical collaborations, internship opportunities, and innovative AI project discussions.
             </p>
           </div>
 
@@ -18,7 +18,7 @@ export default function Contact() {
               href="mailto:pvsatvika@gmail.com" 
               className="editorial-channel-card"
             >
-              <div className="channel-tag-mono">EMAIL DIRECT</div>
+              <div className="channel-tag-mono">DIRECT EMAIL</div>
               <div className="channel-title">pvsatvika@gmail.com</div>
               <span className="channel-arrow-link">Send Email ↗</span>
             </a>
@@ -29,19 +29,19 @@ export default function Contact() {
               rel="noopener noreferrer" 
               className="editorial-channel-card"
             >
-              <div className="channel-tag-mono">GITHUB REPOSITORIES</div>
+              <div className="channel-tag-mono">GITHUB PROFILE</div>
               <div className="channel-title">github.com/pvsatvika</div>
-              <span className="channel-arrow-link">View Profile ↗</span>
+              <span className="channel-arrow-link">View Repositories ↗</span>
             </a>
 
             <a 
-              href="https://www.linkedin.com/in/pv-satvika-a1120439b/" 
+              href="https://www.linkedin.com/in/pvsatvika" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="editorial-channel-card"
             >
-              <div className="channel-tag-mono">LINKEDIN NETWORK</div>
-              <div className="channel-title">pv-satvika</div>
+              <div className="channel-tag-mono">LINKEDIN PROFILE</div>
+              <div className="channel-title">linkedin.com/in/pvsatvika</div>
               <span className="channel-arrow-link">Connect on LinkedIn ↗</span>
             </a>
           </div>
