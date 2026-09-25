@@ -1,137 +1,139 @@
 import React, { useState } from 'react';
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState('All Projects');
+  const [activeCategory, setActiveCategory] = useState('ALL');
 
-  const categories = ['All Projects', 'AI & ML', 'Voice & GIS', 'Web Platforms'];
+  const categories = ['ALL', 'AI & GENAI', 'FULL-STACK', 'GIS & TOOLS'];
 
   const mainProjects = [
     {
-      num: '01',
-      title: 'Industrial Intelligence — AI-Powered Document Q&A System',
-      domain: 'ET AI Hackathon 2.0',
-      category: 'AI & ML',
-      overview: 'Intelligent PDF Q&A engine that extracts document context and delivers grounded natural language answers.',
+      num: '01 / 05',
+      title: 'Industrial Intelligence',
+      subtitle: 'ET AI Hackathon 2.0 — 2nd Round Qualifier',
+      domain: 'AI & GENAI',
+      category: 'AI & GENAI',
+      summary: 'AI-powered document Q&A application allowing natural language queries over uploaded PDFs with context-grounded responses.',
       features: [
-        'PDF text extraction and chunk parsing using PyPDF',
-        'Google Gemini API integration with custom prompt engineering',
-        'Interactive Streamlit frontend interface for seamless PDF uploads'
+        'PDF text parsing and chunk extraction via PyPDF',
+        'Google Gemini API integration with prompt engineering for accurate context grounding',
+        'Interactive Streamlit frontend interface supporting multi-document upload and chat history'
       ],
       stack: ['Python', 'Streamlit', 'Google Gemini API', 'PyPDF', 'Git'],
       repo: 'https://github.com/pvsatvika/Industrial-Intelligence'
     },
     {
-      num: '02',
+      num: '02 / 05',
       title: 'AshaAssist / Murf-LiveKit Starter',
-      domain: 'Voice AI Architecture',
-      category: 'Voice & GIS',
-      overview: 'Real-time voice agent starter kit delivering low-latency conversational audio.',
+      subtitle: 'Voice AI Architecture',
+      domain: 'AI & GENAI',
+      category: 'AI & GENAI',
+      summary: 'Real-time conversational voice agent starter architecture delivering low-latency audio interaction.',
       features: [
-        'WebSockets audio streaming pipeline for real-time interaction',
-        'Murf AI voice synthesis integration',
-        'LiveKit infrastructure setup for low-latency voice agents'
+        'WebSocket audio streaming pipeline for real-time bidirectional communication',
+        'Murf AI voice engine integration for dynamic text-to-speech rendering',
+        'LiveKit streaming infrastructure setup supporting low-latency voice agent interactions'
       ],
       stack: ['Python', 'Murf AI', 'LiveKit', 'FastAPI', 'WebSockets'],
       repo: 'https://github.com/pvsatvika/murf-livekit-starter'
     },
     {
-      num: '03',
+      num: '03 / 05',
       title: 'EXPERIA — Sell Experiences, Not Products',
-      domain: 'Full-Stack Web Platform',
-      category: 'Web Platforms',
-      overview: 'Full-stack experience booking web platform designed for intuitive service exploration.',
+      subtitle: 'Full-Stack Web Platform',
+      domain: 'FULL-STACK',
+      category: 'FULL-STACK',
+      summary: 'Modern full-stack experience booking web platform designed for intuitive service discovery and structured catalog management.',
       features: [
-        'Responsive catalog browsing interface for experience categories',
-        'Flask backend API routing and session management',
-        'Structured SQLite database schema for booking records'
+        'Responsive client-side catalog browsing interface for experience categories',
+        'Flask backend integration managing API request routing and session state',
+        'Structured SQLite database schema handling booking reservations and user data'
       ],
       stack: ['JavaScript', 'HTML/CSS', 'Python', 'Flask', 'SQLite'],
       repo: 'https://github.com/pvsatvika/EXPERIA-Sell-Experiences.-Not-Products.'
     },
     {
-      num: '04',
+      num: '04 / 05',
       title: 'PyroSentinel-GIS',
-      domain: 'Geospatial Analytics',
-      category: 'Voice & GIS',
-      overview: 'Geospatial monitoring prototype tracking industrial fire risks and incident logs.',
+      subtitle: 'Geospatial Analytics Prototype',
+      domain: 'GIS & TOOLS',
+      category: 'GIS & TOOLS',
+      summary: 'Geospatial monitoring prototype tracking industrial fire hazards, emergency incident logs, and spatial hazard maps.',
       features: [
-        'Interactive map layer rendering and spatial coordinate tracking',
-        'Real-time incident data mapping for hazard visualization',
-        'Emergency awareness dashboard for industrial site safety'
+        'Map layer rendering and spatial coordinate pinpointing for industrial sites',
+        'Real-time incident data mapping enabling visual hazard assessments',
+        'Emergency awareness dashboard facilitating rapid situational monitoring'
       ],
       stack: ['JavaScript', 'GIS APIs', 'Python', 'HTML/CSS'],
       repo: 'https://github.com/pvsatvika/pyrosentinel-gis'
     },
     {
-      num: '05',
+      num: '05 / 05',
       title: 'BugTrace',
-      domain: 'Diagnostics Pipeline',
-      category: 'AI & ML',
-      overview: 'Telemetry and issue diagnostic framework for monitoring bug lifecycles.',
+      subtitle: 'Telemetry & Diagnostics Pipeline',
+      domain: 'GIS & TOOLS',
+      category: 'GIS & TOOLS',
+      summary: 'Telemetry and issue diagnostic pipeline for tracking software bug lifecycles and mobile log reports.',
       features: [
-        'Structured issue logging and crash report capture',
-        'Diagnostic data collection with inspectable log entries',
-        'FastAPI backend status tracking pipeline'
+        'Structured issue logging capturing device telemetry and stack traces',
+        'Diagnostic data collection with developer inspectable log feeds',
+        'FastAPI backend endpoint pipeline tracking bug resolution status'
       ],
       stack: ['Python', 'FastAPI', 'Android Telemetry', 'SQLite'],
       repo: 'https://github.com/pvsatvika/BugTrace'
-    },
-    {
-      num: '06',
-      title: 'Tourism Guide Web Application (Team Project)',
-      domain: 'Team Web Project',
-      category: 'Web Platforms',
-      overview: 'Interactive single-page travel web app for destination exploration.',
-      features: [
-        'Interactive budget estimators for regional trip planning',
-        'Seasonal travel attraction listings with responsive UI layout',
-        'Flask micro-service backend routing'
-      ],
-      stack: ['Flask', 'HTML/CSS', 'JavaScript', 'Git'],
-      repo: 'https://github.com/sruthi-r-22/Tourism_Guide'
     }
   ];
 
-  const additionalProjects = [
+  const moreProjects = [
     {
-      title: 'Student Study Planner (C / Data Structures)',
-      domain: 'C Language CLI',
-      overview: 'Menu-driven command-line tool to structure study schedules and prioritize task deadlines.',
+      title: 'Tourism Guide Web Application',
+      domain: 'Team Web Project',
+      summary: 'Single-page travel guide web application featuring destination budget estimators, attraction listings, and responsive UI navigation.',
       features: [
-        'Priority queue implementation for deadline management',
-        'Modular C file structure and dynamic memory allocation'
+        'Budget estimator tool for regional travel route planning',
+        'Flask backend routing integration for content delivery'
+      ],
+      stack: ['Flask', 'HTML/CSS', 'JavaScript'],
+      repo: 'https://github.com/sruthi-r-22/Tourism_Guide'
+    },
+    {
+      title: 'Student Study Planner',
+      domain: 'C / Data Structures',
+      summary: 'Menu-driven command-line tool designed to structure study schedules, organize task deadlines, and track assignment priorities.',
+      features: [
+        'Priority queue data structure implementation for deadline tracking',
+        'Modular C file architecture with dynamic memory allocation'
       ],
       stack: ['C', 'Data Structures']
     },
     {
-      title: 'Tic-Tac-Toe Game (C & Python 2D Arrays)',
-      domain: 'Logic Game',
-      overview: 'Strategic board game evaluating win conditions using multi-dimensional array logic.',
+      title: 'Tic-Tac-Toe Game',
+      domain: 'C & Python 2D Arrays',
+      summary: 'Strategic two-player board game evaluating win conditions using multi-dimensional array evaluation algorithms.',
       features: [
-        'Matrix evaluation algorithm for rows, columns, and diagonals',
-        'Input validation and turn-based state tracking'
+        'Matrix win-condition evaluation logic across rows, columns, and diagonals',
+        'Input validation and turn-based state management'
       ],
       stack: ['C', 'Python']
     }
   ];
 
-  const filteredProjects = activeCategory === 'All Projects'
+  const filteredProjects = activeCategory === 'ALL'
     ? mainProjects
     : mainProjects.filter(p => p.category === activeCategory);
 
   return (
     <section className="editorial-projects-section" id="projects">
       <div className="editorial-container">
-        {/* Section Title Header */}
+        {/* Section Header */}
         <div className="section-title-group">
-          <span className="section-meta-mono">05 // ENGINEERING PROJECTS</span>
-          <h2 className="section-main-title">Projects & System Architecture</h2>
+          <span className="section-meta-mono">01 // CASE STUDIES & REPOSITORIES</span>
+          <h2 className="section-main-title">Featured Projects</h2>
           <p className="section-editorial-lead">
-            Standardized technical overviews of practical applications built across document intelligence, voice agents, full-stack platforms, geospatial tracking, and system diagnostics.
+            Standardized technical breakdowns of production repositories across document AI, real-time voice architectures, full-stack web platforms, geospatial analytics, and telemetry pipelines.
           </p>
         </div>
 
-        {/* Category Filter System */}
+        {/* Top Category Filter Tabs */}
         <div className="project-tabs-container">
           {categories.map((cat) => (
             <button
@@ -144,22 +146,23 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Standardized Featured Projects Grid */}
+        {/* Featured Projects Grid */}
         <div className="projects-featured-grid">
           {filteredProjects.map((project) => (
             <article key={project.num} className="featured-editorial-card standardized-project-card">
               <div className="card-top-metadata-row">
                 <span className="meta-badge-left">{project.domain}</span>
-                <span className="meta-badge-right">{project.num}</span>
+                <span className="meta-badge-right font-mono-num">{project.num}</span>
               </div>
 
               <h3 className="featured-card-title">{project.title}</h3>
+              <p className="featured-card-subtitle">{project.subtitle}</p>
 
-              <p className="featured-card-narrative">{project.overview}</p>
+              <p className="featured-card-narrative">{project.summary}</p>
 
-              {/* Key Features & Architecture Bullet Points */}
+              {/* Key Features & Architecture */}
               <div className="project-architecture-block">
-                <span className="arch-label">KEY FEATURES & ARCHITECTURE:</span>
+                <span className="arch-label">KEY FEATURES &amp; ARCHITECTURE:</span>
                 <ul className="arch-bullets">
                   {project.features.map((feat, i) => (
                     <li key={i} className="arch-bullet-item">
@@ -170,23 +173,23 @@ export default function Projects() {
                 </ul>
               </div>
 
-              {/* Applied Technologies Pill Badges */}
+              {/* Applied Tech Stack */}
               <div className="featured-card-pills">
                 {project.stack.map((t) => (
                   <span key={t} className="project-tech-pill">{t}</span>
                 ))}
               </div>
 
-              {/* GitHub Repository Link */}
+              {/* Source Code Direct Link Button */}
               {project.repo && (
                 <div className="featured-card-footer">
                   <a
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="card-github-link"
+                    className="card-github-link source-code-btn"
                   >
-                    View Code on GitHub ↗
+                    Source Code ↗
                   </a>
                 </div>
               )}
@@ -194,19 +197,19 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Additional Technical Work */}
+        {/* More Projects (3-Column Subsection) */}
         <div className="more-projects-section">
           <div className="more-projects-header">
-            <span className="section-meta-mono">ADDITIONAL TECHNICAL WORK</span>
-            <h3 className="more-projects-title">Foundational C & Logic Projects</h3>
+            <span className="section-meta-mono">ADDITIONAL WORK &amp; REPOSITORIES</span>
+            <h3 className="more-projects-title">More Projects</h3>
           </div>
 
           <div className="more-projects-grid">
-            {additionalProjects.map((item, idx) => (
+            {moreProjects.map((item, idx) => (
               <div key={idx} className="more-project-card">
                 <div className="more-card-tag">{item.domain}</div>
                 <h4 className="more-card-title">{item.title}</h4>
-                <p className="more-card-desc">{item.overview}</p>
+                <p className="more-card-desc">{item.summary}</p>
                 
                 <div className="project-architecture-block compact-arch">
                   <ul className="arch-bullets">
@@ -224,6 +227,17 @@ export default function Projects() {
                     <span key={t} className="mini-tech-tag">{t}</span>
                   ))}
                 </div>
+
+                {item.repo && (
+                  <a 
+                    href={item.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="more-card-link"
+                  >
+                    Source Code ↗
+                  </a>
+                )}
               </div>
             ))}
           </div>

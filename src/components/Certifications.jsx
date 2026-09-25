@@ -34,17 +34,17 @@ export default function Certifications() {
     },
     {
       issuer: 'ET AI HACKATHON 2.0',
-      title: 'ET AI Hackathon 2.0 Certificate',
+      title: 'ET AI Hackathon 2.0 Participation Certificate',
       detail: 'Official Participation Certificate for ET AI Hackathon 2.0.'
     },
     {
       issuer: 'ADOBE / UNSTOP',
-      title: 'Adobe Hackathon Certificate',
+      title: 'Adobe Unstop Hackathon Participation Certificate',
       detail: 'Official Participation Certificate for Adobe Unstop Hackathon.'
     },
     {
       issuer: 'WOMEN WHO ASPIRE',
-      title: 'Women Who Aspire Certificate',
+      title: 'Women Who Aspire Participation Certificate',
       detail: 'Official Participation Certificate for Women Who Aspire Hackathon.'
     },
     {
@@ -59,7 +59,7 @@ export default function Certifications() {
     },
     {
       issuer: 'HACKERRANK',
-      title: 'HackerRank — Problem Solving (Basic)',
+      title: 'HackerRank — Problem Solving (Basic) Verified Badge',
       detail: 'Verified skill badge in algorithmic problem solving and logic.'
     },
     {
@@ -79,14 +79,14 @@ export default function Certifications() {
       <div className="editorial-container">
         {/* Section Header */}
         <div className="section-title-group">
-          <span className="section-meta-mono">07 // CREDENTIALS & CERTIFICATIONS</span>
-          <h2 className="section-main-title">Certifications & Learning</h2>
+          <span className="section-meta-mono">04 // CREDENTIALS & LEARNING</span>
+          <h2 className="section-main-title">Certifications</h2>
           <p className="section-editorial-lead">
-            Verified skill badges, learning tracks, technical certifications, and hackathon participation credentials.
+            Structured informational cards detailing completed technical courses, cloud learning tracks, verified skill badges, and hackathon certificates.
           </p>
         </div>
 
-        {/* Static 3-Column Grid with NO external buttons/links */}
+        {/* Clean 3-Column Static Grid with NO buttons or links */}
         <div className="certifications-3col-grid">
           {certificationsList.map((item, index) => (
             <div key={index} className="cert-grid-card">

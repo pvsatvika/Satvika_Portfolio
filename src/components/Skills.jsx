@@ -3,10 +3,10 @@ import React from 'react';
 export default function Skills() {
   const skillCards = [
     {
-      id: 'ai-ml',
+      id: 'ai-genai',
       tag: '// 01',
-      badge: 'AI & INTELLIGENCE',
-      title: 'Intelligent Systems & AI',
+      badge: 'INTELLIGENCE',
+      title: 'AI / ML & GenAI',
       items: [
         'Machine Learning Fundamentals',
         'Generative AI Workflows',
@@ -16,10 +16,10 @@ export default function Skills() {
       ]
     },
     {
-      id: 'web-app',
+      id: 'web-dev',
       tag: '// 02',
       badge: 'APPLICATION STACK',
-      title: 'Web & Application Stack',
+      title: 'Web Development',
       items: [
         'Python (Flask)',
         'Streamlit',
@@ -30,7 +30,7 @@ export default function Skills() {
       ]
     },
     {
-      id: 'prog-lang',
+      id: 'prog-found',
       tag: '// 03',
       badge: 'LANGUAGES',
       title: 'Programming Foundations',
@@ -44,16 +44,16 @@ export default function Skills() {
       items: [
         'Data Structures & Algorithms',
         'Object-Oriented Programming (OOP)',
-        'Database Management Systems (DBMS)',
+        'DBMS',
         'MySQL',
         'SQLite'
       ]
     },
     {
-      id: 'tools-dev',
+      id: 'dev-tools',
       tag: '// 05',
-      badge: 'DEVELOPER ENVIRONMENT',
-      title: 'Workflows & Developer Tools',
+      badge: 'ENVIRONMENT',
+      title: 'Developer Tools & Workflows',
       items: ['Git', 'GitHub', 'VS Code', 'AWS Educate']
     }
   ];
@@ -63,10 +63,10 @@ export default function Skills() {
       <div className="editorial-container">
         {/* Section Header */}
         <div className="skills-editorial-header">
-          <span className="skills-meta-tag">04. TECHNICAL TOOLSET</span>
-          <h2 className="skills-serif-title">Skills & Capabilities</h2>
+          <span className="skills-meta-tag">02. TECHNICAL TOOLSET</span>
+          <h2 className="skills-serif-title">Technical Skills</h2>
           <p className="skills-editorial-lead">
-            Structured technical capabilities grounded in university coursework, full-stack application engineering, and hackathon projects.
+            Categorized technical toolset grounded in university coursework, AI application development, and hackathon project repositories.
           </p>
           <div className="skills-header-divider"></div>
         </div>
@@ -98,7 +98,7 @@ export default function Skills() {
         <div className="skills-bottom-banner">
           <span className="banner-icon">//</span>
           <span className="banner-text">
-            <strong>Practical Application:</strong> Toolset actively applied across production repositories, competitive hackathons, and software projects.
+            <strong>Practical Execution:</strong> All technologies actively applied across open-source codebases, competitive hackathons, and software projects.
           </span>
         </div>
       </div>

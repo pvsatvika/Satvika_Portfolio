@@ -13,22 +13,18 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Intro', href: '#hero' },
-    { label: 'About', href: '#about' },
-    { label: 'Academics', href: '#academics' },
-    { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Journey', href: '#journey' },
-    { label: 'Certifications', href: '#certifications' },
-    { label: 'Interests', href: '#interests' },
+    { label: 'Technical Skills', href: '#skills' },
+    { label: 'Achievements', href: '#journey' },
     { label: 'Contact', href: '#contact' }
   ];
 
   return (
     <header className={`editorial-navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
-        <a href="#hero" className="brand-logo">
-          PV SATVIKA
+        <a href="#hero" className="brand-logo-wrapper">
+          <span className="brand-logo">PV SATVIKA</span>
+          <span className="brand-subtag">AI &amp; FULL-STACK</span>
         </a>
 
         <nav className="desktop-nav">
@@ -38,6 +34,12 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
+
+        <div className="nav-cta-pinned">
+          <a href="#contact" className="nav-cta-btn">
+            Get In Touch
+          </a>
+        </div>
 
         <button 
           className="mobile-nav-toggle"
@@ -61,6 +63,13 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
+          <a 
+            href="#contact" 
+            className="mobile-nav-item mobile-nav-cta"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Get In Touch
+          </a>
         </nav>
       )}
     </header>
