@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- Dark #151515 Circle Background -->
+  <circle cx="32" cy="32" r="31" fill="#151515" />
+  
+  <!-- Hairline Accent Ring (#D8C5A9) -->
+  <circle cx="32" cy="32" r="29.5" fill="none" stroke="#D8C5A9" stroke-width="1.5" stroke-opacity="0.5" />
+  
+  <!-- Monogram: Elegant Serif S in Warm Cream (#F3EDE3) -->
+  <text 
+    x="50%" 
+    y="54%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif" 
+    font-size="32" 
+    font-weight="700" 
+    letter-spacing="-0.02em" 
+    fill="#F3EDE3"
+  >
+    S
+  </text>
+</svg>
